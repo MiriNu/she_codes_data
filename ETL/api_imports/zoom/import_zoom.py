@@ -18,6 +18,6 @@ class Zoom:
             for param in params:
                 headers[param[0]] = param[1]
             print(headers)
-            return headers 
+            return headers
         else:
             raise Exception('Section {0} not found in the file'.format('Auth'))
