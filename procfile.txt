@@ -1,1 +1,1 @@
-web: airflow webserver --port=$PORT --hostname==0.0.0.0
+web: airflow webserver
