@@ -17,10 +17,7 @@ df_meeting_instances = pd.DataFrame(columns=["uuid","id","host_id","topic","type
 branches = ["10","20","30","40","50","60","70","80","90","100","200","300"]
 #branches = ["10"]
 payload={}
-headers = {
-  'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IncwT3luSWlVU2pLdGVwSlhMVXlvUFEiLCJleHAiOjQxMDI0Mzc2MDAsImlhdCI6MTYxNzQ2ODM4Nn0.LtNHeZz1vxxDx6pSIU2sQ92AJhT7pmnuIzjRAwkjkho',
-  'Cookie': 'cred=B9A5509726F2D17EE944ECC47724ADBF'
-}
+headers = headers
 
 for branch in branches:
   url = "https://api.zoom.us/v2/users/branch" + branch + "@she-codes.org/meetings?page_size=50"
