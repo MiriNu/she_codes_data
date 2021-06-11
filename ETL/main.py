@@ -3,8 +3,9 @@ import pandas as pd
 import json
 from datetime import datetime
 import DB_Connection as dbc
+from configparser import ConfigParser
 
-"""def does_exists_time(time_value,dict):
+def does_exists_time(time_value,dict):
   if time_value in dict.keys():
     return dict[time_value]
   return '1970-01-01 00:00:00'
@@ -16,8 +17,6 @@ df_meeting_instances = pd.DataFrame(columns=["uuid","id","host_id","topic","type
 
 branches = ["10","20","30","40","50","60","70","80","90","100","200","300"]
 #branches = ["10"]
-payload={}
-headers = headers
 
 for branch in branches:
   url = "https://api.zoom.us/v2/users/branch" + branch + "@she-codes.org/meetings?page_size=50"
@@ -80,7 +79,7 @@ for meeting in df_meetings["uuid"]:
     "insert_ts": datetime.utcnow().strftime("%d-%m-%Y %H:%M:%S")
       }, ignore_index=True)
 
-df_meeting_instances.to_csv(r'meetings_she_codes.csv',encoding='utf-8-sig')"""
+df_meeting_instances.to_csv(r'meetings_she_codes.csv',encoding='utf-8-sig')
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
